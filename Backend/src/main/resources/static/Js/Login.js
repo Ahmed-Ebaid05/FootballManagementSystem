@@ -8,7 +8,7 @@ document.querySelector(".login-form .container").addEventListener("submit", asyn
 
     const formData = new FormData(this);
 
-    const response = await fetch("/Login", {
+    const response = await fetch("https://footballmanagementsystem-production-27eb.up.railway.app/Login", {
         method: "POST",
         body: new URLSearchParams(formData),
         headers: {
