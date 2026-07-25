@@ -1,18 +1,18 @@
 //Fetches
 async function fetchMatchesByRound (round) {
-    const res = await fetch(`http://localhost:8080/getMatchesByRound/${round}`);
+    const res = await fetch(`https://footballmanagementsystem-production-27eb.up.railway.app/getMatchesByRound/${round}`);
     const Matches = await res.json();
     return Matches;
 }
 
 async function getRoundsNumber () {
-    const res = await fetch(`http://localhost:8080/getRoundsNumber`);
+    const res = await fetch(`https://footballmanagementsystem-production-27eb.up.railway.app/getRoundsNumber`);
     const RoundsNumber = await res.json();
     return RoundsNumber;
 }
 
 async function fetchAccount () {
-    const res = await fetch(`http://localhost:8080/currentUser`);
+    const res = await fetch(`https://footballmanagementsystem-production-27eb.up.railway.app/currentUser`);
     if (!res.ok)
         return null;
     const text = await res.text();
@@ -23,7 +23,7 @@ async function fetchAccount () {
 
 //Edit Data
 async function changeMatchStatusRequest (MatchId, Status) {
-    const res = await fetch (`http://localhost:8080/admin/changeStatues/${MatchId}/${Status}`, {
+    const res = await fetch (`https://footballmanagementsystem-production-27eb.up.railway.app/admin/changeStatues/${MatchId}/${Status}`, {
         method: "POST"
     });
     return res.ok;
