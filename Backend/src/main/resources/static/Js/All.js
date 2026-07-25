@@ -6,7 +6,7 @@ let navUl = document.querySelector("header .container ul");
 
 
 async function fetchAccount () {
-    const res = await fetch(`http://localhost:8080/currentUser`);
+    const res = await fetch(`https://footballmanagementsystem-production-27eb.up.railway.app/currentUser`);
     if (!res.ok)
         return null;
     const text = await res.text();
