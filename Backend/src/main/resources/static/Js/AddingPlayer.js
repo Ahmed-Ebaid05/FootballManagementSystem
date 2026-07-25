@@ -2,21 +2,21 @@
 
 //Fetches
 async function fetchTeams (Team_Id) {
-    const res = await fetch(`http://localhost:8080/getTeam/${Team_Id}`);
+    const res = await fetch(`https://footballmanagementsystem-production-27eb.up.railway.app/getTeam/${Team_Id}`);
     const Team = await res.json();
     return Team;
 }
 
 //Edit Data 
 async function newPlayerDataRequest (Num, Name, Year, Month, Day, Natio, Team_id, Pos) {
-    const res = await fetch(`http://localhost:8080/admin/addPlayer/${Num}/${Name}/${Year}-${Month}-${Day}/${Natio}/${Team_id}/${Pos}`, {
+    const res = await fetch(`https://footballmanagementsystem-production-27eb.up.railway.app/admin/addPlayer/${Num}/${Name}/${Year}-${Month}-${Day}/${Natio}/${Team_id}/${Pos}`, {
         method: "PUT"
     })
     return res.ok;
 } 
 
 async function editingPlayerDataRequest(Player_id, Num, Name, Year, Month, Day, Natio, Team_id, Pos) {
-    const res = await fetch(`http://localhost:8080/admin/editPlayerData/${Player_id}/${Num}/${Name}/${Year}-${Month}-${Day}/${Natio}/${Team_id}/${Pos}`, {
+    const res = await fetch(`https://footballmanagementsystem-production-27eb.up.railway.app/admin/editPlayerData/${Player_id}/${Num}/${Name}/${Year}-${Month}-${Day}/${Natio}/${Team_id}/${Pos}`, {
         method: "POST"
     });
     return res.ok;
