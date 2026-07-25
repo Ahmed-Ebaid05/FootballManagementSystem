@@ -1,61 +1,61 @@
 //Fetch Matches
 async function fetchMatchesByRound (Round) {
-    const res = await fetch(`http://localhost:8080/getMatchesByRound/${Round}`);
+    const res = await fetch(`https://footballmanagementsystem-production-27eb.up.railway.app/getMatchesByRound/${Round}`);
     let Matches = await res.json();
     return Matches;
 }
 
 async function fetchPlayersByTeam (Team) {
-    const res = await fetch(`http://localhost:8080/admin/getPlayersByTeam/${Team.id}`);
+    const res = await fetch(`https://footballmanagementsystem-production-27eb.up.railway.app/admin/getPlayersByTeam/${Team.id}`);
     const Players = await res.json();
     return Players;
 }
 
 //Edit Data
 async function deleteGoalsByMatchRequest (Match) {
-    const res = await fetch(`http://localhost:8080/admin/deleteGoalByMatch/${Match.id}`, {
+    const res = await fetch(`https://footballmanagementsystem-production-27eb.up.railway.app/admin/deleteGoalByMatch/${Match.id}`, {
         method: "POST"
     });
     return res.ok;
 }
 
 async function addMatchResults (Match) {
-    const res = await fetch(`http://localhost:8080/admin/addMatchResults/${Match.id}`, {
+    const res = await fetch(`https://footballmanagementsystem-production-27eb.up.railway.app/admin/addMatchResults/${Match.id}`, {
         method: "POST"
     });
     return res.ok;
 }
 
 async function addPenaltyRequest (Match, Player, Team, Scored, num) {
-    const res = await fetch(`http://localhost:8080/admin/addPenalty/${Match.id}/${Player}/${Team.id}/${Scored}/${num}`, {
+    const res = await fetch(`https://footballmanagementsystem-production-27eb.up.railway.app/admin/addPenalty/${Match.id}/${Player}/${Team.id}/${Scored}/${num}`, {
         method: "POST"
     });
     return res.ok;
 } 
 
 async function deleteMatchResults (Match) {
-    const res = await fetch(`http://localhost:8080/admin/deleteMatchResults/${Match.id}`, {
+    const res = await fetch(`https://footballmanagementsystem-production-27eb.up.railway.app/admin/deleteMatchResults/${Match.id}`, {
         method: "POST"
     });
     return res.ok;
 }
 
 async function deletePenaltyRequest (PenaltyId) {
-    const res = await fetch(`http://localhost:8080/admin/deletePenalty/${PenaltyId}`, {
+    const res = await fetch(`https://footballmanagementsystem-production-27eb.up.railway.app/admin/deletePenalty/${PenaltyId}`, {
         method: "POST"
     });
     return res.ok;
 } 
 
 async function deletePenaltiesByMatchRequest (Match) {
-    const res = await fetch(`http://localhost:8080/admin/deletePenaltiesByMatch/${Match.id}`, {
+    const res = await fetch(`https://footballmanagementsystem-production-27eb.up.railway.app/admin/deletePenaltiesByMatch/${Match.id}`, {
         method: "POST"
     });
     return res.ok;
 }
 
 async function makingTableRequest () {
-    const res = await fetch(`http://localhost:8080/makingTable`, {
+    const res = await fetch(`https://footballmanagementsystem-production-27eb.up.railway.app/makingTable`, {
         method: "POST"
     });
     return res.ok;
