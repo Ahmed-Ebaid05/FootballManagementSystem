@@ -1,6 +1,6 @@
 //Edit Data
 async function addNewTeamRequest (formData) {
-    const res = await fetch(`http://localhost:8080/admin/addNewTeam`,{
+    const res = await fetch(`https://footballmanagementsystem-production-27eb.up.railway.app/admin/addNewTeam`,{
             method: "PUT",
             body: formData
         });
@@ -8,7 +8,7 @@ async function addNewTeamRequest (formData) {
 }
 
 async function getTeams () {
-    const res = await fetch(`http://localhost:8080/admin/getAllTeams`);
+    const res = await fetch(`https://footballmanagementsystem-production-27eb.up.railway.app/admin/getAllTeams`);
     const Teams = await res.json();
     return Teams;
 }
