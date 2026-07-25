@@ -1,12 +1,12 @@
 //Fetches
 async function fetchTable () {
-    const res = await fetch(`http://localhost:8080/getTable/`);
+    const res = await fetch(`https://footballmanagementsystem-production-27eb.up.railway.app/getTable/`);
     const TableTeams = await res.json();
     return TableTeams;
 }
 
 async function fetchGoalsCount () {
-    const res = await fetch(`http://localhost:8080/getTableGoalsCount`);
+    const res = await fetch(`https://footballmanagementsystem-production-27eb.up.railway.app/getTableGoalsCount`);
     const Goals = await res.json();
     return Goals;
 }
