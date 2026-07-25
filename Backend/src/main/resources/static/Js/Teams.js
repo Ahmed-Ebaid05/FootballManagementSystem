@@ -1,12 +1,12 @@
 //Fetches
 async function fetchTeams () {
-    const res = await fetch(`http://localhost:8080/getTeamsInLeague`);
+    const res = await fetch(`https://footballmanagementsystem-production-27eb.up.railway.app/getTeamsInLeague`);
     const Teams = await res.json();
     return Teams;
 }
 
 async function fetchTeamById (TeamId) {
-    const res = await fetch(`http://localhost:8080/getTeam/${TeamId}`)
+    const res = await fetch(`https://footballmanagementsystem-production-27eb.up.railway.app/getTeam/${TeamId}`)
     const Team = await res.json();
     return Team;
 }
