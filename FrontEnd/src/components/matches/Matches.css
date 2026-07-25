@@ -1,0 +1,340 @@
+:root {
+    --blue: #007bff;
+    --indigo: #0d0cb5;
+    --purple: #7971ea;
+    --pink: #e83e8c;
+    --red: #f23a2e;
+    --orange: #ef6c57;
+    --yellow: #f89d13;
+    --green: #8bc34a;
+    --teal: #48d494;
+    --cyan: #17a2b8;
+    --white: #fff;
+    --gray: #6c757d;
+    --gray-dark: #343a40;
+    --primary: #ee1e46;
+    --secondary: #6c757d;
+    --success: #8bc34a;
+    --info: #17a2b8;
+    --warning: #f89d13;
+    --danger: #f23a2e;
+    --light: #f8f9fa;
+    --dark: #343a40;
+}
+
+.matches {
+    padding: 100px 0;
+}
+
+.matches .container {
+    position: relative;
+}
+
+.matches .container .round {
+    position: relative;
+    width: 80%;
+    background-color: var(--primary);
+    margin: auto;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.matches .container .round::before ,
+.matches .container .round::after {
+    content: "";
+    position: absolute;
+    background-color: #000;
+    width: 150%;
+    border-radius: 50%;
+    height: 50%;
+}
+
+.matches .container .round::before {
+    left: 50%;
+    top: -50%;
+    transform: translate(-50%, 60%);
+}
+
+.matches .container .round::after {
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, 40%);
+}
+
+.matches .container .round p {
+    color: #fff;
+    font-size: 70px;
+    font-weight: bold;
+    z-index: 1;
+}
+
+.matches .container .round > span {
+    position: absolute;
+    bottom: 40px;
+    color: #fff;
+    z-index: 1;
+}
+
+.matches .container .box {
+    position: relative;
+    display: grid;
+    grid-template-columns: 40% 20% 40%;
+    margin-top: 50px;
+    width: 100%;
+    border-radius: 10px;
+}
+
+.matches .container .box .team {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    color: #fff;
+    padding: 20px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.matches .container .box .home-team {
+    background-color: #000;
+    border-radius: 10px 0 0 10px;
+}
+
+.matches .container .box .away-team {
+    background-color: var(--primary);
+    border-radius: 0 10px 10px 0;
+}
+
+.matches .container .box .team .image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #e9e9e9;
+    border-radius: 50%;
+}
+
+.matches .container .box .team .image img {
+    width: 60px;
+    height: 60px;
+}
+
+.matches .container .box .team .name {
+    text-align: center;
+}
+
+.matches .container .box .team .goal-arrow {
+    background-color: transparent;
+    width: 0;
+    height: 0;
+    border-width: 10px;
+    border-style: solid;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.matches .container .box .home-team .goal-arrow {
+    border-color: var(--primary) transparent transparent transparent;
+}
+
+.matches .container .box .away-team .goal-arrow {
+    border-color: #000 transparent transparent transparent;
+}
+
+.matches .container .box .team .goal-arrow.open {
+    transform: rotateX(180deg);
+}
+
+.matches .container .box .team ul {
+    position: absolute;
+    padding: 10px;
+    border-radius: 5px;
+    top: 90%;
+    font-weight: normal;
+    font-size: 16px;
+    transform: rotateX(90deg);
+    z-index: 5;
+    text-align: center;
+    transform-origin: top;
+    transition: 0.3s;
+}
+
+.matches .container .box .team ul li {
+    padding: 5px 0;
+}
+
+.matches .container .box .team ul.opened {
+    transform: rotateX(0deg);
+}
+
+.matches .container .box .home-team ul {
+    background-color: var(--primary);
+}
+
+.matches .container .box .away-team ul {
+    background-color: #000;
+}
+
+.matches .container .box .vs {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    color: #fff;
+    text-align: center;
+    font-weight: bold;
+    position: relative;
+    z-index: 1;
+}
+
+.matches .container .box .vs::after ,
+.matches .container .box .vs::before {
+    content: "";
+    position: absolute;
+    width: 57%;
+    height: 100%;
+}
+
+.matches .container .box .vs::after {
+    right: -6%;
+    background-color: var(--primary);
+    transform: skew(-6deg);
+}
+
+.matches .container .box .vs::before {
+    left: -6%;
+    background-color: #000;
+    transform: skew(-6deg);
+}
+
+.matches .container .box .vs p,
+.matches .container .box .vs span {
+    font-size: 25px;
+    z-index: 1;
+}
+
+.matches .container .box .controls {
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    background-color: var(--gray);
+    padding: 10px;
+    z-index: 5;
+    border-radius: 10px;
+    transform: translateX(-50%) rotateX(90deg);
+    transform-origin: top;
+    transition: 0.3s;
+}
+
+.matches .container .box .controls.opened {
+    transform: translateX(-50%) rotateX(0deg);
+}
+
+.matches .container .box .controls-arrow {
+    width: 0;
+    height: 0;
+    border-color: #fff transparent transparent transparent;
+    border-width: 10px;
+    border-style: solid;
+    cursor: pointer;
+    transition: 0.3s;
+    z-index: 1;
+}
+
+.matches .container .box .controls-arrow.open {
+    transform: rotateX(180deg);
+}
+
+.matches .container .box .controls select {
+    background-color: #000;
+    padding: 5px;
+    color: #fff;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.matches .container .box .controls select option {
+    cursor: pointer;
+}
+
+.matches .container .box .controls button {
+    background-color: #000;
+    color: #fff;
+    padding: 5px 10px;
+    border: 1px solid #000;
+    border-radius: 10px;
+    margin-left: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.matches .container .box .controls button:hover {
+    background-color: transparent;
+}
+
+.matches .container .box .controls select:focus {
+    outline: none;    
+}
+
+@media (max-width: 992px) {
+    .matches .container .box .vs::after {
+        right: -8%;
+        width: 60%;
+    }
+
+    .matches .container .box .vs::before {
+        left: -8%;
+        width: 60%;
+    }
+
+}
+
+@media (max-width: 767px) {
+
+    .matches .container .round {
+        height: 300px;
+    }
+
+    .matches .container .round p {
+        font-size: 40px;
+    }
+
+    .matches .container .box .team .image img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .matches .container .box .team .name {
+        font-size: 15px;
+    }
+
+    .matches .container .box .team ul li {
+        font-size: 12px;
+    }
+
+
+    .matches .container .box .vs::after {
+        right: -15%;
+        width: 65%;
+    }
+
+    .matches .container .box .vs::before {
+        left: -15%;
+        width: 65%;
+    }
+
+    .matches .container .box .vs p,
+    .matches .container .box .vs span {
+        font-size: 15px;
+    }
+
+}

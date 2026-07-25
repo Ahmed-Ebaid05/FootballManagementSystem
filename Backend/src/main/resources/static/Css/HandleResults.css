@@ -1,0 +1,541 @@
+:root {
+    --blue: #007bff;
+    --indigo: #0d0cb5;
+    --purple: #7971ea;
+    --pink: #e83e8c;
+    --red: #f23a2e;
+    --orange: #ef6c57;
+    --yellow: #f89d13;
+    --green: #8bc34a;
+    --teal: #48d494;
+    --cyan: #17a2b8;
+    --white: #fff;
+    --gray: #6c757d;
+    --gray-dark: #343a40;
+    --primary: #ee1e46;
+    --secondary: #6c757d;
+    --success: #8bc34a;
+    --info: #17a2b8;
+    --warning: #f89d13;
+    --danger: #f23a2e;
+    --light: #f8f9fa;
+    --dark: #343a40;
+}
+
+/* Start Selection  */
+
+.selection .container {
+    background-color: var(--primary);
+    padding: 20px;
+    width: fit-content;
+    border-radius: 10px;
+    margin-top: 100px;
+}
+
+.selection .container .box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.selection .container .box select {
+    background-color: #555;
+    padding: 5px;
+    font-size: 15px;
+    color: #fff;
+    border-radius: 10px;
+}
+
+.selection .container .submit {
+    background-color: black;
+    border-radius: 10px;
+    padding: 5px 10px;
+    font-size: 15px;
+    font-weight: bold;
+    color: #fff;
+    border: none;
+    display: block;
+    margin: 10px auto 0;
+    border: 2px solid black;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.selection .container .submit:hover {
+    background-color: transparent;
+    border: 2px solid #fff;
+}
+
+/* End Selection */
+
+/* Start Matches */
+
+.matches {
+    position: relative;
+}
+
+.matches .container {
+    margin-top: 100px;
+}
+
+.matches .container .box {
+    display: flex;
+    border-radius: 10px;
+    justify-content: space-between;
+    position: relative;
+    margin-bottom: 50px;
+}
+
+.matches .container .box .team {
+    text-align: center;
+    width: 45%;
+    padding: 20px;
+    position: relative;
+}
+
+.matches .container .box .team::after {
+    content: "";
+    position: absolute;
+    width: 16%;
+    top: 0px;
+    height: calc(100%);
+}
+
+.matches .container .box .team1::after { 
+    background-color: black;
+    transform: translateX(100%) skew(-10deg);
+    right: 4.5%;
+}
+
+.matches .container .box .team2::after {
+    background-color: var(--primary);
+    transform: translateX(-100%) skew(-10deg);
+    left: 4.5%;
+}
+
+.matches .container .box .team1 {
+    background-color: black;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.matches .container .box .team2 {
+    background-color: var(--primary);
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.matches .container .box .VS {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -42%);
+    text-align: center;
+    color: #fff;
+    font-size: 30px;
+    font-weight: bold;
+    z-index: 5;
+}
+
+.matches .container .box .VS input {
+    background-color: #555;
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+    border: none;
+    text-align: center;
+    border-radius: 10px;
+    color: #fff;
+}
+
+.matches .container .box .team .image {
+    border-radius: 50%;
+    background-color: #fff;
+    padding: 10px;
+    width: 70px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+}
+
+.matches .container .box .team .image img {
+    width: 50px;
+    height: 50px;
+}
+
+.matches .container .box .text {
+    position: relative;
+}
+
+.matches .container .box .text > p {
+    color: #fff;
+    font-size: 20px;
+    color: #fff;
+    font-weight: bold;
+    margin-top: 10px;
+    min-width: 100px;
+}
+
+.matches .container .box .text .arrowGoals {
+    width: 0;
+    height: 0;
+    margin: 10px auto 0;
+    border-width: 10px;
+    border-style: solid;
+    z-index: 5;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.matches .container .box .text .arrow1 {
+    border-color: var(--primary) transparent transparent transparent;
+}
+
+.matches .container .box .text .arrow2 {
+    border-color: black transparent transparent transparent;
+}
+
+.matches .container .box .text .arrowGoals.active {
+    transform: rotateX(180deg);
+}
+
+.matches .container .box .team .text .goals {
+    margin: 5px auto 0;
+    color: #fff;
+    width: fit-content;
+    padding: 10px;
+    border-radius: 10px;
+    left: 50%;
+    transform: translate(-50%,0) rotateX(90deg);
+    position: absolute;
+    transition: 0.3s;
+    transform-origin: top;
+    z-index: 5;
+}
+
+.matches .container .box .team1 .text .goals {
+    background-color: var(--primary);
+}
+
+.matches .container .box .team2 .text .goals {
+    background-color: black;
+}
+
+.matches .container .box .team .text .goals.active {
+    transform: translate(-50%, 0) rotateX(0deg);
+}
+
+.matches .container .box .text .goals li {
+    color: #fff;
+    padding: 5px 0;
+}
+
+.matches .container .submit {
+    background-color: var(--gray-dark);
+    border-radius: 10px;
+    padding: 10px 20px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #fff;
+    border: none;
+    display: block;
+    margin: auto;
+    transition: 0.3s;
+    border: 2px solid var(--gray-dark);
+    cursor: pointer;
+}
+
+.matches .container .submit:hover {
+    background-color: transparent;
+    border: 2px solid #fff;
+}
+
+@media (max-width: 991px) {
+    .matches .container .box .team::after {
+        width: 20.5%;
+    }
+
+    .matches .container .box .team1::after { 
+        background-color: black;
+        transform: translateX(100%) skew(-10deg);
+        right: 9%;
+    }
+
+    .matches .container .box .team2::after {
+        background-color: var(--primary);
+        transform: translateX(-100%) skew(-10deg);
+        left: 9%;
+    }
+
+    .matches .container .box .team .text .goals {
+        width: 100%;
+    }
+
+}
+
+@media (max-width: 767px) {
+
+    .matches .container .box .team::after {
+        width: 19%;
+    }
+
+    .matches .container .box .team1::after { 
+        background-color: black;
+        transform: translateX(100%) skew(-10deg);
+        right: 8%;
+    }
+
+    .matches .container .box .team2::after {
+        background-color: var(--primary);
+        transform: translateX(-100%) skew(-10deg);
+        left: 8%;
+    }
+
+    .matches .container .box .team .image {
+        width: 50px;
+        height: 50px;
+    }
+
+    .matches .container .box .team .image img {
+        width: 35px;
+        height: 35px;
+    }
+
+    .matches .container .box .text > p {
+        font-size: 12px;
+    }
+
+    .matches .container .box .team .text .goals {
+        width: 100%;
+    }
+
+    .matches .container .box .text .goals li {
+        font-size: 10px;
+        width: 100%;
+    }
+
+}
+
+
+/* End Matches */
+
+
+/* Start Process Status */
+
+.process-status {
+    background-color: var(--primary);
+    position: absolute;
+    padding: 20px;
+    border-radius: 10px;
+    border: 2px solid var(--gray-dark);
+    width: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotateX(90deg);
+    text-align: center;
+    transition: 0.3s;
+}
+
+.process-status.margined {
+    top: calc(50% + 700px);
+}
+
+.process-status.active {
+    transform: translate(-50%, -50%) rotateX(0deg);
+}
+
+.process-status p {
+    color: #fff;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.process-status .T {
+    color: #3db673;
+}
+
+.process-status .X {
+    color: rgb(143, 6, 6);
+}
+
+.process-status button {
+    background-color: var(--gray-dark);
+    border-radius: 5px;
+    color: #fff;
+    font-weight: bold;
+    font-size: 20px;
+    padding: 5px 10px;
+    border: 2px solid var(--gray-dark);
+    transition: 0.3s;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.process-status button:hover {
+    background-color: transparent;
+}
+
+@media (max-width: 767px) {
+    .process-status p {
+        font-size: 20px;
+    }
+}
+
+/* End Process Status */
+
+/* Start Penalties */
+
+.penalties {
+    margin-top: 100px;
+}
+
+.penalties .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    gap: 100px;
+}
+
+.penalties .container .team {
+    background-color: var(--primary);
+    border-radius: 10px;
+    padding: 0 5px;
+}
+
+.penalties .container .team .box {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.penalties .container .team .box:not(:nth-of-type(5)) {
+    border-bottom: 1px solid var(--gray-dark)
+}
+
+.penalties .container .team .box h4 {
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.penalties .container .team .box .players {
+    background-color: black;
+    border-radius: 5px;
+    border: none;
+    color: #fff;
+    padding: 5px;
+    margin-top: 10px;
+}
+
+.penalties .container .team .box .radios {
+    padding: 10px;
+    margin: 10px 0;
+}
+
+.penalties .container .team .box label {
+    margin-top: 10px;
+    margin-left: 20px;
+    color: #fff;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.penalties .container .team .box label:hover {
+    color: var(--gray-dark);
+}
+
+.penalties .container .team .box .submit,
+.penalties .container .team .box .edit {    
+    background-color: var(--gray-dark);
+    border: 3px solid var(--gray-dark);
+    border-radius: 5px;
+    padding: 5px 10px;
+    font-size: 15px;
+    font-weight: bold;
+    color: #fff;
+    margin-top: 5px;
+    transition: 0.3s;
+    width: 100%;
+    cursor: pointer;
+    display: none;
+}
+
+.penalties .container .team .box .submit.active,
+.penalties .container .team .box .edit.active {
+    display: block;
+}
+
+.penalties .container .team .box .submit:hover,
+.penalties .container .team .box .edit:hover {
+    background-color: transparent;
+    border: 3px solid #fff;
+}
+
+/* End Penalties */
+
+/* Start Footer */
+
+footer {
+    margin-top: 100px;
+    background-color: #1a1e25;
+    padding: 100px 0;
+}
+
+footer .container .uls {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(25%, 1fr));
+}
+
+footer .container .uls ul li:first-of-type {
+    font-size: 16px;
+    color: #fff;
+}
+
+footer .container .uls ul li {
+    padding: 10px;
+    color: #aaa;
+    font-size: 14px;
+}
+
+footer .container p {
+    display: block;
+    text-align: center;
+    margin: 100px auto 0;
+    font-size: 15px;
+    line-height: 1.5;
+    color: #777;
+}
+
+footer .container p span {
+    color: var(--primary);
+}
+
+@media (max-width: 767px) {
+    footer .container .uls {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+/* End Footer */
+
+.dim-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 1000;
+    transform: translateY(-100%);
+    transition: 0.3s;
+}
+
+.dim-overlay.dim {
+    transform: translateY(0);
+}
+
+.highlighted {
+    z-index: 1001;
+}

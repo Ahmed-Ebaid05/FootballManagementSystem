@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leon Templete One</title>
+    <link rel="stylesheet" href="/Css/Signup.css">
+    <link rel="stylesheet" href="/Css/Main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Pixelify+Sans:wght@400..700&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap"rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js"></script>
+</head>
+<body>
+
+<div class="dim-overlay"></div>
+
+<!-- Start Header  -->
+
+<header>
+    <div class="container">
+        <img src="images/logo.png.webp" alt="" class="logo">
+        <ul>
+            <i class="fas fa-times X"></i>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="Matches.html">Matches</a></li>
+            <li><a href="Teams.html">teams</a></li>
+            <li><a href="table.html">Table</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li class="settings-li"><a href="Settings.html">Settings</a></li>
+        </ul>
+        <div class="btns">
+            <button class="login">Log In</button>
+            <button class="signup">Sign Up</button>
+        </div>
+
+        <div class="profile">
+            <div class="user-data">
+                <p class="acc-name"></p>
+                <div class="sitts-arrow"></div>
+                <div class="acc-sitts">
+                    <form action="/logout" class="logout" method="post">
+                        <button type="submit">Logout</button>
+                    </form>
+                    <div class="delete-acc">
+                        <button class="delete-account-btn">Delete Account</button>
+                    </div>
+                </div>
+            </div>
+            <img src="" class="profile-pic">
+        </div>
+
+        <i class="fas fa-bars fa-2x toggole"></i>
+    </div>
+</header>
+
+<!-- End Header -->
+
+<!-- Start Landing -->
+
+<div class="landing">
+    <div class="container">
+        <div class="text">
+            <h2>Sign up</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta, molestias repudiandae pariatur.</p>
+        </div>
+    </div>
+</div>
+
+<!-- End Landing -->
+
+<!-- Start Sign Up -->
+
+<div class="signup">
+    <div class="container">
+        <p>Submiting Your Data</p>
+        <div class="box">
+            <div class="labels">
+                <label>
+                    <p>First Name:</p>
+                    <input type="text" class="firstName" placeholder="First Name">
+                </label>
+                <label>
+                    <p>Last Name:</p>
+                    <input type="text" class="lastName" placeholder="Last Name">
+                </label>
+                <label>
+                    <p>Email:</p>
+                    <input type="email" class="email" placeholder="Email">
+                </label>
+                <label>
+                    <p>Username:</p>
+                    <input type="text" class="username" placeholder="Username">
+                </label>
+                <label class="password-label">
+                    <p>Passsword:</p>
+                    <input type="password" class="password" placeholder="Password">
+                </label>
+                <label class="password-label">
+                    <p>Confirm Passsword:</p>
+                    <input type="password" class="confirm-password" placeholder="Password">
+                </label>
+                <label class="pic-label">
+                    <p>Choose profile picture:</p>
+                    <input type="file" class="profile-pic">
+                </label>
+                <label class="birthdate-label">
+                    <p>Birthdate:</p>
+                        <input type="text" list="year" class="year-input" placeholder="Year">
+                        <datalist id="year"></datalist>
+                    <input type="text" list="month" class="month-input" placeholder="Month">
+                    <datalist id="month">
+                        <option value="1">January</option>
+                        <option value="2">February</option>
+                        <option value="3">March</option>
+                        <option value="4">April</option>
+                        <option value="5">May</option>
+                        <option value="6">June</option>
+                        <option value="7">July</option>
+                        <option value="8">August</option>
+                        <option value="9">September</option>
+                        <option value="10">October</option>
+                        <option value="11">November</option>
+                        <option value="12">December</option>
+                    </datalist>
+                    <input type="text" list="day" class="day-input" placeholder="Day">
+                    <datalist id="day"></datalist>
+                </label>
+            </div>
+            <button class="submit">Submit</button>
+        </div>
+    </div>
+
+    <!-- Start Process Status -->
+
+    <div class="process-success process-status">
+        <i class="fas fa-check fa-4x T"></i>
+        <p></p>
+        <button>OK</button>
+    </div>
+
+    <div class="process-falied process-status">
+        <i class="fas fa-times fa-4x X"></i>
+        <p>Process failed</p>
+        <button>OK</button>
+    </div>
+
+    <!-- End Process Status -->
+
+    </div>
+
+</div>
+
+<!-- End Sign Up -->
+
+<!-- Start Footer  -->
+
+<footer>
+    <div class="container">
+
+        <div class="uls">
+            <ul>
+                <li>News</li>
+                <li>All</li>
+                <li>Club News</li>
+                <li>Media Center</li>
+                <li>Video</li>
+                <li>RSS</li>
+            </ul>
+
+            <ul>
+                <li>Tickets</li>
+                <li>Online Ticket</li>
+                <li>Payment and Prices</li>
+                <li>Contact & Booking</li>
+                <li>Tickets</li>
+                <li>Coupon</li>
+            </ul>
+
+            <ul>
+                <li>Matches</li>
+                <li>Standings</li>
+                <li>World Cup</li>
+                <li>La Lega</li>
+                <li>Hyper Cup</li>
+                <li>World League</li>
+            </ul>
+
+            <ul>
+                <li>Social</li>
+                <li>Twitter</li>
+                <li>Facebook</li>
+                <li>Instagram</li>
+                <li>Youtube</li>
+            </ul>
+        </div>
+
+        <p>Copyright © 2025 All rights reserved | This template is made with <i class="fas fa-heart"></i> by <span>Colorlib</span>
+        </p>
+
+    </div>
+</footer>
+
+<!-- End Footer -->
+
+<script src="Js/All.js"></script>
+<script src="Js/Signup.js"></script>
+
+</body>
+</html>

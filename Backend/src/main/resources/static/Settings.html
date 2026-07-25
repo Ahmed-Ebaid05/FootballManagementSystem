@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leon Templete One</title>
+    <link rel="stylesheet" href="/Css/Settings.css">
+    <link rel="stylesheet" href="/Css/Main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Pixelify+Sans:wght@400..700&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap"rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js"></script>
+</head>
+<body>
+
+    <div class="dim-overlay"></div>
+
+<!-- Start Header  -->
+
+<header>
+    <div class="container">
+        <img src="images/logo.png.webp" alt="" class="logo">
+        <ul>
+            <i class="fas fa-times X"></i>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="Matches.html">Matches</a></li>
+            <li><a href="Teams.html">teams</a></li>
+            <li><a href="table.html">Table</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a class="settings-li active"  href="Settings.html">Settings</a></li>
+        </ul>
+        <div class="btns">
+            <button class="login">Log In</button>
+            <button class="signup">Sign Up</button>
+        </div>
+
+        <div class="profile">
+            <div class="user-data">
+                <p class="acc-name"></p>
+                <div class="sitts-arrow"></div>
+                <div class="acc-sitts">
+                    <form action="/logout" class="logout" method="post">
+                        <button type="submit">Logout</button>
+                    </form>
+                    <div class="delete-acc">
+                        <button class="delete-account-btn">Delete Account</button>
+                    </div>
+                </div>
+            </div>
+            <img src="" class="profile-pic">
+        </div>
+
+        <i class="fas fa-bars fa-2x toggole"></i>
+
+    </div>
+</header>
+
+<!-- End Header -->
+
+<!-- Start Landing -->
+
+<div class="landing">
+    <div class="container">
+        <div class="text">
+            <h2>Settings</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta, molestias repudiandae pariatur.</p>
+        </div>
+    </div>
+</div>
+
+<!-- End Landing -->
+
+<!-- Start Settings -->
+
+<div class="settings">
+    <div class="container">
+        <p>Main Settings</p>
+        <div class="settings-btns">
+            <div class="box">
+                <i class="far fa-id-badge fa-3x"></i>
+                <button class="add-player setting-button">Add Player</button>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil, temporibus fugiat ea</p>
+            </div>
+            <div class="box">
+                <i class="fas fa-random fa-3x"></i>
+                <button class="change-team setting-button">Change Player Team</button>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil, temporibus fugiat ea</p>
+            </div>
+            <div class="box">
+                <i class="fas fa-user-times fa-3x"></i>
+                <button class="remove-player setting-button">Remove Player</button>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil, temporibus fugiat ea</p>
+            </div>
+            <div class="box">
+                <i class="fas fa-newspaper fa-3x"></i>
+                <button class="new-team setting-button">Add New Team</button>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil, temporibus fugiat ea</p>
+            </div>
+            <div class="box">
+                <i class="fas fa-exchange-alt fa-3x"></i>
+                <button class="replace-team setting-button">Reaplce Team</button>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil, temporibus fugiat ea</p>
+            </div>
+            <div class="box">
+                <i class="far fa-futbol fa-3x"></i>
+                <button class="generate-matches setting-button">Generate Matches</button>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil, temporibus fugiat ea</p>
+            </div>
+            <div class="box">
+                <i class="far fa-plus-circle fa-3x"></i>                
+                <button class="add-match setting-button">Add Match</button>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil, temporibus fugiat ea</p>
+            </div>
+            <div class="box">
+                <i class="far fa-minus-circle fa-3x"></i>                
+                <button class="delete-match setting-button">Remove Match</button>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil, temporibus fugiat ea</p>
+            </div>
+            <div class="box">
+                <i class="fas fa-edit fa-3x"></i>
+                <button class="edit-results setting-button">Edit Results</button>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil, temporibus fugiat ea</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Start Change Team -->
+
+    <div class="changing-team">
+        <i class="fas fa-times X"></i>
+        <div class="labels">
+            <label>
+                <p>Player: </p>
+                <select class="players"></select>
+            </label>
+            <label>
+                <p>New Team: </p>
+                <select class="teams"></select>
+            </label>
+        </div>
+        <button class="change-submit">Submit</button>
+    </div>
+
+    <!-- End Change Team -->
+
+    <!-- Start Remove Player -->
+
+    <div class="removing-player">
+        <i class="fas fa-times X"></i>
+        <label>
+            <p>Player: </p>
+            <select class="players"></select>
+        </label>
+        <button class="remove-submit">Submit</button>
+    </div>
+
+    <!-- End Remove Player -->
+
+    <!-- Start Replace Team -->
+
+    <div class="replaceing-team">
+        <i class="fas fa-times X"></i>
+            <label>
+                <p>New Team: </p>
+                <select class="teams"></select>
+            </label>
+        <button class="replace-submit">Submit</button>
+    </div>
+
+    <!-- End Replace Team -->
+
+    <!-- Start Making Matches -->
+
+    <div class="making-matches">
+        <i class="fas fa-times X"></i>
+            <label>
+                <p>Number of rounds: </p>
+                <input type="number" class="rounds">
+            </label>
+            <label>
+                <p>Matches in rounds: </p>
+                <input type="number" class="matchesInRound" disabled>
+            </label>
+            <label>
+                <p>Categories: </p>
+                <input type="number" class="categories">
+            </label>
+        <button class="matches-submit">Submit</button>
+    </div>
+
+    <div class="making-times">
+        <i class="fas fa-times X"></i>
+    </div>
+
+    <!-- End Making Matches -->
+
+    <!-- Start Making Matches -->
+
+    <div class="making-matches">
+        <i class="fas fa-times X"></i>
+            <label>
+                <p>Number of rounds: </p>
+                <input type="number" class="rounds">
+            </label>
+            <label>
+                <p>Matches in rounds: </p>
+                <input type="number" class="matchesInRound" disabled>
+            </label>
+            <label>
+                <p>Categories: </p>
+                <input type="number" class="categories">
+            </label>
+        <button class="matches-submit">Submit</button>
+    </div>
+
+    <div class="making-times">
+        <i class="fas fa-times X"></i>
+    </div>
+
+    <!-- End Making Matches -->
+
+    <!-- Start Editing Results -->
+
+    <div class="add-delete">
+        <i class="fas fa-times X"></i>
+        <button class="add-results">Add Results</button>
+        <button class="delete-results">Delete Results</button>
+    </div>
+
+    <div class="editing-results">
+        <i class="fas fa-times X"></i>
+            <label>
+                <p>Wins: </p>
+                <input type="number" class="wins">
+            </label>
+            <label>
+                <p>Loses: </p>
+                <input type="number" class="loses">
+            </label>
+            <label>
+                <p>Ties: </p>
+                <input type="number" class="ties">
+            </label>
+        <button class="edit-result-submit">Submit</button>
+    </div>
+
+    <div class="making-times">
+        <i class="fas fa-times X"></i>
+    </div>
+
+    <!-- End Editing Results -->
+
+    <!-- Start Add Match  -->
+
+    <div class="adding-match">
+        <i class="fas fa-times X"></i>
+        <div class="labels">
+            <label>
+                <p>Home team: </p>
+                <select class="home">
+                    
+                </select>
+            </label>
+            <label>
+                <p>Away team: </p>
+                <select class="away">
+                    
+                </select>
+            </label>
+            <label class="date-label">
+                <p>Date: </p>
+                    <input type="text" list="year" class="year-input" placeholder="Year">
+                    <datalist id="year"></datalist>
+                <input type="text" list="month" class="month-input" placeholder="Month">
+                <datalist id="month">
+                    <option value="1">January</option>
+                    <option value="2">February</option>
+                    <option value="3">March</option>
+                    <option value="4">April</option>
+                    <option value="5">May</option>
+                    <option value="6">June</option>
+                    <option value="7">July</option>
+                    <option value="8">August</option>
+                    <option value="9">September</option>
+                    <option value="10">October</option>
+                    <option value="11">November</option>
+                    <option value="12">December</option>
+                </datalist>
+                <input type="text" list="day" class="day-input" placeholder="Day">
+                <datalist id="day"></datalist>
+            </label>
+            <label>
+                <p>Time: </p>
+                <div class="inputs">
+                <input type="number" min="0" max="23" class="hrs"> :
+                <input type="number" min="0" max="59" class="mins">
+                </div>
+            </label>
+        </div>
+        <button class="submit">submit</button>
+    </div>
+
+    <!-- End Add Match -->
+
+    <!-- Start Delete Match -->
+
+    <div class="deleting-match">
+        <i class="fas fa-times X"></i>
+        <div class="labels">
+            <label>
+                <p>Special Matches</p>
+                <select class="match">
+                </select>
+            </label>
+            <button class="submit">Submit</button>
+        </div>
+    </div>
+
+    <!-- End Delete Match -->
+
+    <!-- Start Process Status -->
+
+    <div class="process-success process-status">
+        <i class="fas fa-check fa-4x T"></i>
+        <p></p>
+        <button>OK</button>
+    </div>
+
+    <div class="process-falied process-status">
+        <i class="fas fa-times fa-4x X"></i>
+        <p>Process failed</p>
+        <button>OK</button>
+    </div>
+
+    <!-- End Process Status -->
+
+</div>
+
+<!-- End Settings -->
+
+<!-- Start Team Selection -->
+
+<div class="team-selection">
+    <i class="fas fa-times X"></i>
+    <input type="text" class="search" placeholder="Search">
+    <ul class="teams" tabindex="0">
+    </ul>
+</div>
+
+<!-- End Team Selection -->
+
+<!-- Start Footer  -->
+
+<footer>
+    <div class="container">
+
+        <div class="uls">
+            <ul>
+                <li>News</li>
+                <li>All</li>
+                <li>Club News</li>
+                <li>Media Center</li>
+                <li>Video</li>
+                <li>RSS</li>
+            </ul>
+
+            <ul>
+                <li>Tickets</li>
+                <li>Online Ticket</li>
+                <li>Payment and Prices</li>
+                <li>Contact & Booking</li>
+                <li>Tickets</li>
+                <li>Coupon</li>
+            </ul>
+
+            <ul>
+                <li>Matches</li>
+                <li>Standings</li>
+                <li>World Cup</li>
+                <li>La Lega</li>
+                <li>Hyper Cup</li>
+                <li>World League</li>
+            </ul>
+
+            <ul>
+                <li>Social</li>
+                <li>Twitter</li>
+                <li>Facebook</li>
+                <li>Instagram</li>
+                <li>Youtube</li>
+            </ul>
+        </div>
+
+        <p>Copyright © 2025 All rights reserved | This template is made with <i class="fas fa-heart"></i> by <span>Colorlib</span>
+        </p>
+
+    </div>
+</footer>
+
+<!-- End Footer -->
+
+<script src="Js/All.js"></script>
+<script src="Js/Settings.js"></script>
+
+</body>
+</html>

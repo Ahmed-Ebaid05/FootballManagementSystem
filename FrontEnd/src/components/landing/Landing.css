@@ -1,0 +1,159 @@
+:root {
+    --blue: #007bff;
+    --indigo: #0d0cb5;
+    --purple: #7971ea;
+    --pink: #e83e8c;
+    --red: #f23a2e;
+    --orange: #ef6c57;
+    --yellow: #f89d13;
+    --green: #8bc34a;
+    --teal: #48d494;
+    --cyan: #17a2b8;
+    --white: #fff;
+    --gray: #6c757d;
+    --gray-dark: #343a40;
+    --primary: #ee1e46;
+    --secondary: #6c757d;
+    --success: #8bc34a;
+    --info: #17a2b8;
+    --warning: #f89d13;
+    --danger: #f23a2e;
+    --light: #f8f9fa;
+    --dark: #343a40;
+}
+
+.landing {
+    position: relative;
+    height: 100vh;
+    background-image: url(../../../public/images/bg_3.jpg.webp);
+    background-size: cover;
+    background-position: 100%;
+}
+
+.landing::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgb(0, 0, 0, 0.5);
+}
+
+.landing .content {
+    position: absolute;
+    right: 10%;
+    top: 55%;
+    transform: translateY(-50%);
+    width: 30%;
+    z-index: 1;
+}
+
+.landing .content .text {
+    color: #fff;
+}
+
+.landing .content .text p {
+    font-size: 70px;
+    font-weight: bold;
+}
+
+.landing .content .text span {
+    font-size: 18px;
+    color: #ccc;
+}
+
+.landing .content ul {
+    display: flex;
+    margin-top: 20px;
+}
+
+.landing .content ul li {
+    padding: 15px;
+    text-align: center;
+    color: #fff;
+}
+
+.landing .content ul li p {
+    font-size: 30px;
+    color: #ccc;
+}
+
+.landing .content .btns {
+    display: flex;
+    gap: 20px;
+}
+
+.landing .content .btns button {
+    padding: 20px 30px;
+    text-transform: uppercase;
+    color: #fff;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.landing .content .btns .book-ticket {
+    background-color: var(--primary);
+    border: 1px solid var(--primary);
+}
+
+.landing .content .btns .learn-more {
+    background-color: transparent;
+    border: 1px solid transparent;
+}   
+
+.landing .content .btns .book-ticket:hover {
+    background-color: transparent;
+}
+
+@media (max-width: 992px) {
+    .landing{
+        background-position: 0%;
+    }
+
+    .landing .content {
+        width: 100%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        padding: 0 50px;
+    }
+    
+    .landing .content .text p {
+        font-size: 60px;
+        margin-bottom: 25px;
+    }
+
+    .landing .content ul {
+        margin-bottom: 25px;
+    }
+
+}
+
+@media (max-width: 767px) {
+
+    .landing .content {
+        padding: 10px;
+    }
+
+    .landing .content .text p {
+        font-size: 40px;
+        margin-bottom: 25px;
+    }
+
+    .landing .content ul {
+        margin-bottom: 25px;
+    }
+
+    .landing .content ul li {
+        padding: 10px;
+    }
+
+    .landing .content ul li p {
+        font-size: 20px;
+    }
+
+
+}

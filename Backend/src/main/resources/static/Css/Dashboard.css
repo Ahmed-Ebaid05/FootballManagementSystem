@@ -1,0 +1,327 @@
+:root {
+    --blue: #007bff;
+    --indigo: #0d0cb5;
+    --purple: #7971ea;
+    --pink: #e83e8c;
+    --red: #f23a2e;
+    --orange: #ef6c57;
+    --yellow: #f89d13;
+    --green: #8bc34a;
+    --teal: #48d494;
+    --cyan: #17a2b8;
+    --white: #fff;
+    --gray: #6c757d;
+    --gray-dark: #343a40;
+    --primary: #ee1e46;
+    --secondary: #6c757d;
+    --success: #8bc34a;
+    --info: #17a2b8;
+    --warning: #f89d13;
+    --danger: #f23a2e;
+    --light: #f8f9fa;
+    --dark: #343a40;
+}
+
+/* Start Dashboard  */
+
+.dashboard {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.dashboard {
+    background-color: var(--gray-dark);
+    padding: 20px;
+    border-radius: 10px;
+    border: 2px solid var(--primary);
+}
+
+.dashboard img {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    border: 5px solid var(--primary);
+    display: block;
+    margin: auto;
+}
+
+.dashboard .pic-btns {
+    display: flex;
+    gap: 20px;
+}
+
+.dashboard .pic-btns button {
+    font-size: 10px;
+}
+
+.dashboard p {
+    color: #fff;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.dashboard .username {
+    font-size: 20px;
+}
+
+.dashboard button {
+    display: block;
+    width: fit-content;
+    padding: 5px 10px;
+    background-color: var(--primary);
+    border: 2px solid var(--primary);
+    margin: 20px auto 0;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 15px;
+    font-weight: bold;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.dashboard button:hover {
+    border-color: #fff;
+    background-color: transparent;
+}
+
+/* End Dashboard */
+
+/* Start Change Pic */
+
+.change-pic {
+    background-color: var(--primary);
+    width: 90%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%) rotateX(90deg);
+    border-radius: 10px;
+    border: 2px solid #fff;
+    padding: 10px;
+    transition: 0.3s;
+}
+
+.change-pic.active {
+    transform: translate(-50%, -50%) rotateX(0deg);
+}
+
+.change-pic input {
+    background-color: var(--gray-dark);
+    width: 100%;
+    border-radius: 5px;
+    color: #fff;
+}
+
+.change-pic p {
+    text-align: center;
+    font-size: 15px;
+    font-weight: normal;
+}
+
+.change-pic button {
+    background-color: var(--gray-dark);
+    border-color: var(--gray-dark);
+}
+
+.change-pic .X {
+    color: #fff;
+    position: absolute;
+    right: 7px;
+    top: 5px;
+    cursor: pointer;
+}
+
+/* End Change Pic */
+
+/* Start Delete Account */
+
+.delete-account {
+    position: absolute;
+    background-color: var(--primary);
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, 10%) rotateX(90deg);
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid #fff;
+    width: fit-content;
+    transition: 0.3s;
+}
+
+.delete-account.active {
+    transform: translate(-50%, 10%) rotateX(0deg);
+}
+
+.delete-account label {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    color: #fff;
+}
+
+.delete-account label input {
+    border-radius: 5px;
+    background-color: var(--gray-dark);
+    border: 1px solid var(--dark);
+    padding-left: 10px;
+    height: 40px;
+    margin: 0 10px;
+    color: #fff ;
+}
+
+.delete-account button {
+    display: block;
+    width: fit-content;
+    background-color: var(--gray-dark);
+    border: 2px solid var(--gray-dark);
+    border-radius: 5px;
+    color: #fff;
+    font-size: 15px;
+    font-weight: bold;
+    margin: 10px auto;
+    padding: 5px 10px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.delete-account button:hover {
+    background-color: transparent;
+    border-color: #fff;
+}
+
+.delete-account .X {
+    color: #fff;
+    position: absolute;
+    right: 7px;
+    top: 5px;
+    cursor: pointer;
+}
+
+
+/* End Delete Account */
+
+/* Start Process Status */
+
+.process-status {
+    background-color: var(--primary);
+    position: absolute;
+    padding: 20px;
+    border-radius: 10px;
+    border: 2px solid var(--gray-dark);
+    width: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -20%) rotateX(90deg);
+    text-align: center;
+    transition: 0.3s;
+}
+
+.process-status.active {
+    transform: translate(-50%, -50%) rotateX(0deg);
+}
+
+.process-status p {
+    color: #fff;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.process-status .T {
+    color: #3db673;
+}
+
+.process-status .X {
+    color: rgb(143, 6, 6);
+}
+
+.process-status button {
+    background-color: var(--gray-dark);
+    border-radius: 5px;
+    color: #fff;
+    font-weight: bold;
+    font-size: 20px;
+    padding: 5px 10px;
+    border: 2px solid var(--gray-dark);
+    transition: 0.3s;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.process-status button:hover {
+    background-color: transparent;
+}
+
+@media (max-width: 767px) {
+    .process-status p {
+        font-size: 20px;
+    }
+}
+
+/* End Process Status */
+
+/* Start Footer */
+
+footer {
+    background-color: #1a1e25;
+    padding: 100px 0;
+}
+
+footer .container .uls {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(25%, 1fr));
+}
+
+footer .container .uls ul li:first-of-type {
+    font-size: 16px;
+    color: #fff;
+}
+
+footer .container .uls ul li {
+    padding: 10px;
+    color: #aaa;
+    font-size: 14px;
+}
+
+footer .container p {
+    display: block;
+    text-align: center;
+    margin: 100px auto 0;
+    font-size: 15px;
+    line-height: 1.5;
+    color: #777;
+}
+
+footer .container p span {
+    color: var(--primary);
+}
+
+@media (max-width: 767px) {
+    footer .container .uls {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+/* End Footer */
+
+.dim-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 1000;
+    transform: translateY(-100%);
+    transition: 0.3s;
+}
+
+.dim-overlay.dim {
+    transform: translateY(0);
+}
+
+.highlighted {
+    z-index: 1001;
+}

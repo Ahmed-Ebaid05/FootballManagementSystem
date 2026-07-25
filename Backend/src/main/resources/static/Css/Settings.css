@@ -1,0 +1,902 @@
+:root {
+    --blue: #007bff;
+    --indigo: #0d0cb5;
+    --purple: #7971ea;
+    --pink: #e83e8c;
+    --red: #f23a2e;
+    --orange: #ef6c57;
+    --yellow: #f89d13;
+    --green: #8bc34a;
+    --teal: #48d494;
+    --cyan: #17a2b8;
+    --white: #fff;
+    --gray: #6c757d;
+    --gray-dark: #343a40;
+    --primary: #ee1e46;
+    --secondary: #6c757d;
+    --success: #8bc34a;
+    --info: #17a2b8;
+    --warning: #f89d13;
+    --danger: #f23a2e;
+    --light: #f8f9fa;
+    --dark: #343a40;
+}
+
+/* Start Settings */
+
+.settings {
+    position: relative;
+}
+
+.settings .container {
+    margin-top: 100px;
+}
+
+.settings .container > p {
+    color: #fff;
+    margin: 30px 0;
+    font-size: 20px;
+    position: relative;
+    margin-left: 20px;
+}
+
+.settings .container > p::before {
+    content: "";
+    position: absolute;
+    background-color: var(--primary);
+    width: 10px;
+    height: 20px;
+    left: -20px;
+}
+
+.settings .container .settings-btns {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+    gap: 40px;
+}
+
+.settings .container .settings-btns .box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: var(--primary);
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.settings .container .settings-btns .box:hover {
+    transform: translateY(-20px);
+}
+
+
+.settings .container .settings-btns .box i {
+    color: #fff;
+    font-weight: bold;
+}
+
+.settings .container .settings-btns .box button {
+    padding: 5px 10px;
+    font-size: 20px;
+    color: #fff;
+    font-weight: bold;
+    text-transform: uppercase;
+    background-color: var(--dark);
+    border-radius: 10px;
+    border: 2px solid var(--dark);
+    margin: 30px 0;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.settings .container .settings-btns .box button:hover {
+    background-color: #fff;
+    color: var(--dark);
+}
+
+.settings .container .settings-btns .box p {
+    font-size: 15px;
+    color: #fff;
+    text-align: center;
+}
+
+@media (max-width: 991px) {
+    .settings .container .settings-btns {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        gap: 40px;
+    }
+}
+
+/* End Settings */
+
+/* Start Team Selection */
+
+.team-selection {
+    position: fixed;
+    left: 0;
+    z-index: 200;
+    background-color: black;
+    top: 0;
+    transform: rotateX(90deg);
+    transition: 0.3s;
+    transform-origin: top;
+}
+
+.team-selection.active {
+    transform: rotateX(0);
+}
+
+.team-selection .search {
+    width: 100%;
+    background-color: var(--gray-dark);
+    margin-top: -1px;
+    height: 25px;
+    display: block;
+    padding-left: 10px;
+    color: #fff;
+    border: none;
+}
+
+.team-selection .search:focus {
+    outline: none;
+}
+
+.team-selection .search::placeholder {
+    color: #fff;
+    display: block;
+    font-size: 15px;
+}
+
+.team-selection .teams {
+    height: 150px;
+    overflow-y: auto;
+    border: 1px solid black;
+    height: 100vh;
+}
+
+.team-selection .teams::-webkit-scrollbar {
+    background-color: var(--dark);
+    width: 5px;
+}
+
+.team-selection .teams::-webkit-scrollbar-thumb {
+    background-color: var(--primary)
+}
+
+.team-selection .teams .team {
+    color: #fff;
+    text-transform: uppercase;
+    padding: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.team-selection .teams .team:hover {
+    background-color: var(--gray-dark);
+}
+
+.team-selection .teams .team.active {
+    background-color: var(--gray-dark);
+}
+
+.team-selection .teams .team.hiddin {
+    display: none;
+}
+
+.team-selection .X {
+    position: absolute;
+    color: #fff;
+    left: calc(100% - 25px);
+    top: 0px;
+    width: 25px;
+    height: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--gray-dark) ;
+    cursor: pointer;
+}
+
+/* End Team Selection */
+
+/* Start Change Team */
+
+.changing-team {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%) rotateX(90deg);
+    background-color: var(--gray-dark);
+    padding: 20px;
+    border: 2px solid var(--gray);
+    border-radius: 10px;
+    transition: 0.3s;
+    display: flex;
+    flex-direction: column;
+}
+
+.changing-team.active {
+    transform: translate(-50%, -50%) rotateX(0deg);
+}
+
+.changing-team .labels {
+    display: flex;
+    gap: 20px;  
+}
+
+.changing-team label {
+    display: flex;
+    gap: 20px;  
+    color: #fff;
+}
+
+.changing-team label select {
+    background-color: var(--gray);
+    border-radius: 5px;
+    color: #fff;
+}
+
+.changing-team button {
+    margin: auto;
+    display: flex;
+    background-color: var(--primary);
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: 2px solid var(--primary);
+    color: #fff;
+    font-size: 15px;
+    font-weight: bold;
+    margin-top: 20px;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.changing-team button:hover {
+    background-color: transparent;
+    border: 2px solid #fff;
+}
+
+.changing-team .X {
+    color: #fff;
+    position: absolute;
+    right: 7px;
+    top: 5px;
+    cursor: pointer;
+}
+
+@media (max-width: 767px) {
+    .changing-team {
+        width: 90%;
+    }
+
+    .changing-team .labels {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/* End Change Team */
+
+/* Start Making Matches */
+
+.making-matches,
+.making-times {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%) rotateX(90deg);
+    background-color: var(--gray-dark);
+    padding: 20px;
+    padding: 20px;
+    border: 2px solid var(--gray);
+    border-radius: 10px;
+    transition: 0.3s;
+    display: flex;
+    flex-direction: column;
+}
+
+.making-matches.active,
+.making-times.active {
+    transform: translate(-50%, -50%) rotateX(0deg);
+}
+
+.making-matches label,
+.making-times label  {
+    display: flex;
+    gap: 20px;  
+    color: #fff;
+    align-items: center;
+}
+
+.making-matches label input,
+.making-times label select {
+    background-color: var(--gray);
+    border-radius: 5px;
+    color: #fff;
+    border: none;
+    margin: 5px 0;
+    width: 35px;
+    height: 35px;
+    font-size: 15px;
+    text-align: center;
+}
+
+.making-matches button,
+.making-times button  {
+    margin: auto;
+    display: flex;
+    background-color: var(--primary);
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: 2px solid var(--primary);
+    color: #fff;
+    font-size: 15px;
+    font-weight: bold;
+    margin-top: 20px;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.making-matches button:hover,
+.making-times button:hover {
+    background-color: transparent;
+    border: 2px solid #fff;
+}
+
+.making-matches .X,
+.making-times .X {
+    color: #fff;
+    position: absolute;
+    right: 7px;
+    top: 5px;
+    cursor: pointer;
+}
+
+.making-times .inputs {
+    display: flex;
+    align-items: center;
+    color: #fff;
+    gap: 10px;
+}
+
+@media (max-width: 767px) {
+    .making-matches {
+        width: 90%;
+    }
+
+    .making-times {
+        width: 90%;
+    }
+}
+
+/* End Making Matches */
+
+/* Start Adding Results */
+
+.editing-results,
+.add-delete {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%) rotateX(90deg);
+    background-color: var(--gray-dark);
+    padding: 20px;
+    padding: 20px;
+    border: 2px solid var(--gray);
+    border-radius: 10px;
+    transition: 0.3s;
+    display: flex;
+}
+
+.editing-results {
+    flex-direction: column;
+}
+
+.add-delete {
+    gap: 20px;
+}
+
+.editing-results.active,
+.add-delete.active {
+    transform: translate(-50%, -50%) rotateX(0deg);
+}
+
+.editing-results label {
+    display: flex;
+    gap: 20px;  
+    color: #fff;
+    align-items: center;
+}
+
+.editing-results label input {
+    background-color: var(--gray);
+    border-radius: 5px;
+    color: #fff;
+    border: none;
+    margin: 5px 0;
+    width: 35px;
+    height: 35px;
+    font-size: 15px;
+    text-align: center;
+}
+
+.editing-results button,
+.add-delete button{
+    margin: auto;
+    display: flex;
+    background-color: var(--primary);
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: 2px solid var(--primary);
+    color: #fff;
+    font-size: 15px;
+    font-weight: bold;
+    margin-top: 20px;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.editing-results button:hover, 
+.add-delete button:hover {
+    background-color: transparent;
+    border: 2px solid #fff;
+}
+
+.editing-results .X,
+.add-delete .X {
+    color: #fff;
+    position: absolute;
+    right: 7px;
+    top: 5px;
+    cursor: pointer;
+}
+
+.editing-results .inputs {
+    display: flex;
+    align-items: center;
+    color: #fff;
+    gap: 10px;
+}
+
+/* @media (max-width: 767px) {
+    .editing-results {
+        width: 90%;
+    }
+
+    .editing-results {
+        width: 90%;
+    }
+} */
+
+/* End Adding Results */
+
+/* Start Process Status */
+
+.process-status {
+    background-color: var(--primary);
+    position: absolute;
+    padding: 20px;
+    border-radius: 10px;
+    border: 2px solid var(--gray-dark);
+    width: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotateX(90deg);
+    text-align: center;
+    transition: 0.3s;
+}
+
+.process-status.active {
+    transform: translate(-50%, -50%) rotateX(0deg);
+}
+
+.process-status p {
+    color: #fff;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.process-status .T {
+    color: #3db673;
+}
+
+.process-status .X {
+    color: rgb(143, 6, 6);
+}
+
+.process-status button {
+    background-color: var(--gray-dark);
+    border-radius: 5px;
+    color: #fff;
+    font-weight: bold;
+    font-size: 20px;
+    padding: 5px 10px;
+    border: 2px solid var(--gray-dark);
+    transition: 0.3s;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.process-status button:hover {
+    background-color: transparent;
+}
+
+@media (max-width: 767px) {
+    .process-status p {
+        font-size: 20px;
+    }
+}
+
+/* End Process Status */
+
+/* Start Remove Player */
+
+.removing-player {
+    position: absolute;
+    width: 35%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%) rotateX(90deg);
+    background-color: var(--gray-dark);
+    padding: 20px;
+    border: 2px solid var(--gray);
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.removing-player.active {
+    transform: translate(-50%, -50%) rotateX(0deg);
+}
+
+.removing-player label {
+    color: #fff;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+}
+
+.removing-player label select {
+    background-color: var(--gray);
+    border-radius: 5px;
+    color: #fff;
+}
+
+.removing-player button {
+    margin: auto;
+    display: flex;
+    background-color: var(--primary);
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: 2px solid var(--primary);
+    color: #fff;
+    font-size: 15px;
+    font-weight: bold;
+    margin-top: 20px;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.removing-player button:hover {
+    background-color: transparent;
+    border: 2px solid #fff;
+}
+
+.removing-player .X {
+    color: #fff;
+    position: absolute;
+    right: 7px;
+    top: 5px;
+    cursor: pointer;
+}
+
+@media (max-width: 767px) {
+    .removing-player {
+        width: 90%;
+    }
+}
+
+/* End Remove Player */
+
+/* Start Replace Team */
+
+.replaceing-team {
+    position: absolute;
+    width: 35%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%) rotateX(90deg);
+    background-color: var(--gray-dark);
+    padding: 20px;
+    border: 2px solid var(--gray);
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.replaceing-team.active {
+    transform: translate(-50%, -50%) rotateX(0deg);
+}
+
+.replaceing-team label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;  
+    color: #fff;
+}
+
+.replaceing-team label select {
+    background-color: var(--gray);
+    border-radius: 5px;
+    color: #fff;
+}
+
+.replaceing-team button {
+    margin: auto;
+    display: flex;
+    background-color: var(--primary);
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: 2px solid var(--primary);
+    color: #fff;
+    font-size: 15px;
+    font-weight: bold;
+    margin-top: 20px;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.replaceing-team button:hover {
+    background-color: transparent;
+    border: 2px solid #fff;
+}
+
+.replaceing-team .X {
+    color: #fff;
+    position: absolute;
+    right: 7px;
+    top: 5px;
+    cursor: pointer;
+}
+
+@media (max-width: 767px) {
+    .replaceing-team {
+        width: 90%;
+    }
+}
+
+/* End Replace Team */
+
+/* Start Add Match */
+
+.adding-match {
+    position: absolute;
+    /* width: 35%; */
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%) rotateX(90deg);
+    background-color: var(--gray-dark);
+    padding: 20px;
+    border: 2px solid var(--gray);
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.adding-match.active {
+    transform: translate(-50%, -50%) rotateX(0deg);
+}
+
+.adding-match .labels {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(100px));
+    width: fit-content;
+    gap: 20px;
+}
+
+.adding-match label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;  
+    width: fit-content;
+    margin: auto;
+    color: #fff;
+}
+
+.adding-match label select {
+    background-color: var(--gray);
+    border-radius: 5px;
+    color: #fff;
+}
+
+.adding-match label input {
+    background-color: var(--gray);
+    border: none;
+    border-radius: 5px;
+    padding: 5px 0;
+    width: 50px;
+    color: #fff;
+    font-size: 20px;
+    text-align: center;
+}
+
+.adding-match button {
+    margin: auto;
+    display: flex;
+    background-color: var(--primary);
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: 2px solid var(--primary);
+    color: #fff;
+    font-size: 15px;
+    font-weight: bold;
+    margin-top: 20px;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.adding-match button:hover {
+    background-color: transparent;
+    border: 2px solid #fff;
+}
+
+.adding-match .X {
+    color: #fff;
+    position: absolute;
+    right: 7px;
+    top: 5px;
+    cursor: pointer;
+}
+
+@media (max-width: 767px) {
+    .adding-match {
+        width: 90%;
+    }
+
+    .adding-match .labels {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+}
+
+/* End Add Match */
+
+/* Start Delete Match */
+
+.deleting-match {
+    position: absolute;
+    /* width: 35%; */
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%) rotateX(90deg);
+    background-color: var(--gray-dark);
+    padding: 20px;
+    border: 2px solid var(--gray);
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.deleting-match.active {
+    transform: translate(-50%, -50%) rotateX(0deg);
+}
+
+.deleting-match label {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;  
+    width: fit-content;
+    margin: auto;
+    color: #fff;
+}
+
+.deleting-match label select {
+    background-color: var(--gray);
+    border-radius: 5px;
+    color: #fff;
+}
+
+.deleting-match button {
+    margin: auto;
+    display: flex;
+    background-color: var(--primary);
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: 2px solid var(--primary);
+    color: #fff;
+    font-size: 15px;
+    font-weight: bold;
+    margin-top: 20px;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.deleting-match button:hover {
+    background-color: transparent;
+    border: 2px solid #fff;
+}
+
+.deleting-match .X {
+    color: #fff;
+    position: absolute;
+    right: 7px;
+    top: 5px;
+    cursor: pointer;
+}
+
+/* End Delete Match */
+
+/* Start Footer */
+
+footer {
+    margin-top: 100px;
+    background-color: #1a1e25;
+    padding: 100px 0;
+}
+
+footer .container .uls {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(25%, 1fr));
+}
+
+footer .container .uls ul li:first-of-type {
+    font-size: 16px;
+    color: #fff;
+}
+
+footer .container .uls ul li {
+    padding: 10px;
+    color: #aaa;
+    font-size: 14px;
+}
+
+footer .container p {
+    display: block;
+    text-align: center;
+    margin: 100px auto 0;
+    font-size: 15px;
+    line-height: 1.5;
+    color: #777;
+}
+
+footer .container p span {
+    color: var(--primary);
+}
+
+@media (max-width: 767px) {
+    footer .container .uls {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+/* End Footer */
+
+.dim-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 1000;
+    transform: translateY(-100%);
+    transition: 0.3s;
+}
+
+.dim-overlay.dim {
+    transform: translateY(0);
+}
+
+.highlighted {
+    z-index: 1002;
+}
+
+.highlighted-1 {
+    z-index: 1001;
+}

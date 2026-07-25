@@ -1,0 +1,1025 @@
+.heading {
+    color: #fff;
+    font-weight: normal;
+    font-size: 20px;
+    position: relative;
+    margin-left: 30px;
+}
+
+.heading::before {
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 20px;
+    background-color: var(--primary);
+    left: -30px;
+}
+
+
+/* Start Landing */
+
+.landing {
+    background-image: url(../images/bg_3.jpg.webp);
+    background-size: cover;
+    height: calc(100vh + 115px);
+    position: relative;
+}
+
+.landing::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0, 0, 0, 0.5);
+}
+
+.landing .text {
+    position: absolute;
+    top: 50%;
+    left: 60%;
+    margin-top: -50px;
+    transform: translateY(-30%);
+    width: 30%;
+    text-align: start;
+}
+
+.landing .text > p {
+    font-size: 65px;
+    text-transform: capitalize;
+    font-weight: bold;
+    color: #fff;
+}
+
+.landing .text > span {
+    color: #ccc;
+    font-size: 18px;
+}
+
+.landing ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(70px, 1fr));
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.landing ul li {
+    margin: auto;
+    color: #fff;
+}
+
+.landing ul li p {
+    font-size: 30px;
+    text-align: center;
+}
+
+.landing ul li span {
+    font-size: 14px;
+    text-transform: lowercase;
+    text-align: center;
+    display: block;
+}
+
+.landing .btns {
+    margin-top: 10px;
+}
+
+.landing .btns button {
+    padding: 20px 30px;
+    border-radius: 5px;
+    border: none;
+    color: #fff;
+    font-weight: bold;
+    font-size: 12px;
+    background-color: transparent;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.landing .btns .book-tik {
+    border: 1px solid var(--primary);
+    background-color: var(--primary);
+    transition: 0.3s;
+}
+
+.landing .btns .book-tik:hover {
+    background-color: transparent;
+    color: #fff;
+    border: 1px solid #fff;
+}
+
+@media (max-width: 991px) {
+    .landing .text {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+        gap: 30px;
+        left: 0px;
+        top: 250px;
+        width: 100%;
+        transform: translateY(30%);
+    }
+}
+
+@media (max-width: 767px) {
+
+    .landing .text {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        left: 0px;
+        top: 250px;
+        width: 100%;
+        transform: translateY(30%);
+    }
+
+    .landing .text > p {
+        font-size: 40px;
+    }
+
+    .landing .toggole {
+        display: block;
+    }
+}
+
+/* End Landing */
+
+/* Start last Match */
+
+
+.last-match {
+    margin-top: -100px;
+}
+
+.last-match .container {
+    min-height: 300px;
+}
+
+.last-match .container {
+    display: flex;
+    position: relative;
+    border-radius: 10px;
+    justify-content: space-between;
+    position: relative;
+    margin-top: 50px;
+}
+
+.last-match .container .team {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center ;
+    width: 45%;
+    padding: 20px;
+    position: relative;
+}
+
+.last-match .container .team::after {
+    content: "";
+    position: absolute;
+    width: 18%;
+    top: 0px;
+    height: calc(100%);
+}
+
+.last-match .container .team1::after { 
+    background-color: black;
+    transform: translateX(100%) skew(-10deg);
+    right: 6.8%;
+}
+
+.last-match .container .team2::after {
+    background-color: var(--primary);
+    transform: translateX(-100%) skew(-10deg);
+    left: 6.8%;
+}
+
+.last-match .container .team1 {
+    background-color: black;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.last-match .container .team2 {
+    background-color: var(--primary);
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.last-match .container .VS {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -42%);
+    text-align: center;
+    color: #fff;
+    z-index: 5;
+}
+
+.last-match .container .VS .result {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.last-match .container .VS .status {
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+.last-match .container .team .image {
+    border-radius: 50%;
+    background-color: #fff;
+    padding: 10px;
+    width: 90px;
+    height: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.last-match .container .team .image img {
+    width: 70px;
+    height: 70px;
+}
+
+.last-match .container .text {
+    position: relative;
+}
+
+.last-match .container .text > p {
+    color: #fff;
+    font-size: 20px;
+    color: #fff;
+    font-weight: bold;
+    margin-top: 10px;
+    min-width: 100px;
+}
+
+.last-match .container .text .arrowGoals {
+    width: 0;
+    height: 0;
+    margin: 10px auto 0;
+    border-width: 10px;
+    border-style: solid;
+    z-index: 5;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.last-match .container .text .arrow1 {
+    border-color: var(--primary) transparent transparent transparent;
+}
+
+.last-match .container .text .arrow2 {
+    border-color: black transparent transparent transparent;
+}
+
+.last-match .container .text .arrowGoals.active {
+    transform: rotateX(180deg);
+}
+
+.last-match .container .team .text .goals {
+    margin: 5px auto 0;
+    color: #fff;
+    width: fit-content;
+    padding: 10px;
+    border-radius: 10px;
+    left: 50%;
+    transform: translate(-50%,0) rotateX(90deg);
+    position: absolute;
+    transition: 0.3s;
+    transform-origin: top;
+    z-index: 5;
+}
+
+.last-match .container .team1 .text .goals {
+    background-color: var(--primary);
+}
+
+.last-match .container .team2 .text .goals {
+    background-color: black;
+}
+
+.last-match .container .team .text .goals.active {
+    transform: translate(-50%, 0) rotateX(0deg);
+}
+
+.last-match .container .text .goals li {
+    color: #fff;
+    padding: 5px 0;
+}
+
+.last-match .container .options {
+    width: fit-content;
+    position: absolute;
+    margin: auto;
+    left: 50%;
+    background-color: var(--gray);
+    border-radius: 10px;
+    margin-top: 40px;
+    padding: 10px;
+    transform: translate(-50%, 0) rotateX(90deg);
+    transform-origin: top;
+    transition: 0.3s;
+    z-index: 8;
+}
+
+.last-match .container .options.active {
+    transform: translate(-50%, 0) rotateX(0deg);
+}
+
+.last-match .container .options div {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+}
+
+.last-match .container .options div select {
+    background-color: black;
+    color: #fff;
+    font-size: 15px;
+    padding: 5px;
+    border-radius: 10px;
+    display: block;
+    margin: auto;
+    border: none;
+}
+
+.last-match .container .options div .submit,
+.last-match .container .options .edit {
+    background-color: var(--dark);
+    font-weight: bold;
+    transition: 0.3s;
+    border: 1px solid var(--dark);
+    padding: 5px 10px;
+    font-size: 12px;
+    cursor: pointer;
+    color: #fff;
+    border-radius: 10px;
+    display: block;
+    margin: auto;
+}
+
+.last-match .container .options .edit {
+    background-color: var(--dark);
+    padding: 10px 20px;
+    font-weight: bold;
+    transition: 0.3s;
+    border: 1px solid var(--dark);
+    font-size: 15px;  
+    cursor: pointer;
+    color: #fff;
+    border-radius: 10px;
+    display: block;
+    margin: auto;
+    margin-top: 20px;
+}
+
+.last-match .container .options .submit:hover,
+.last-match .container .options .edit:hover {
+    background-color: transparent;
+}
+
+.last-match .submit-all {
+    padding: 5px 10px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #fff;
+    background-color: var(--gray);
+    border-radius: 10px;
+    border: 2px solid var(--gray);
+    transition: 0.3s;
+    margin: auto;
+    margin-top: 50px;
+    display: block;
+    cursor: pointer;
+}
+
+.last-match .submit-all:hover {
+    background-color: transparent;
+}
+
+@media (max-width: 991px) {
+    .last-match .container .team::after {
+        width: 20.5%;
+    }
+
+    .last-match .container .team1::after { 
+        background-color: black;
+        transform: translateX(100%) skew(-10deg);
+        right: 9%;
+    }
+
+    .last-match .container .team2::after {
+        background-color: var(--primary);
+        transform: translateX(-100%) skew(-10deg);
+        left: 9%;
+    }
+
+    .last-match .container .team .text .goals {
+        width: 100%;
+    }
+
+}
+
+@media (max-width: 767px) {
+
+    .last-match .container {
+        min-height: 200px;
+    }
+
+    .last-match .container .team::after {
+        width: 21%;
+    }
+
+    .last-match .container .team1::after { 
+        background-color: black;
+        transform: translateX(100%) skew(-10deg);
+        right: 10%;
+    }
+
+    .last-match .container .team2::after {
+        background-color: var(--primary);
+        transform: translateX(-100%) skew(-10deg);
+        left: 10%;
+    }
+
+    .last-match .container .team .image {
+        width: 50px;
+        height: 50px;
+    }
+
+    .last-match .container .team .image img {
+        width: 35px;
+        height: 35px;
+    }
+
+    .last-match .container .text > p {
+        font-size: 12px;
+    }
+
+    .last-match .container .team .text .goals {
+        width: 100%;
+    }
+
+    .last-match .container .text .goals li {
+        font-size: 10px;
+        width: 100%;
+    }
+
+    .last-match .container .VS .result {
+        font-size: 20px;
+    }
+
+    .last-match .container .VS .status {
+        font-size: 15px;
+    }
+
+}
+
+/* End last Match */
+
+.bord {
+    background-color: #222831;
+    width: 100%;
+    height: 300px;
+    margin-top: -250px;
+}
+
+/* Start Latest News */
+
+.latest-news {
+    padding-bottom: 100px;
+}
+
+.latest-news .container {
+    position: relative;
+    padding: 0;
+}
+
+.latest-news .boxes {
+    width: 100%;
+    display: flex;
+    margin-top: 50px;
+    justify-content: center;
+}
+
+.latest-news .boxes .box {
+    width: 33.33333%;
+    background-size: cover;
+    position: relative;
+    overflow: hidden;
+}
+
+.latest-news .boxes .box img {
+    width: 100%;
+    transition: 0.3s;
+}
+
+.latest-news .boxes .box:hover img {
+    transform: scale(1.1);
+}
+
+.latest-news .boxes .box::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: -4px;
+    background-color: rgb(0, 0, 0, 0.4);
+    transition: 0.3s;
+}
+
+.latest-news .boxes .box p {
+    color: #fff;
+    position: relative;
+    z-index: 1;
+    font-weight: bold;
+    position: absolute;
+    bottom: 50px;
+    left: 20px;
+}
+
+.latest-news .boxes .box span {
+    position: absolute;
+    bottom: 20px;
+    color: #aaa;
+    z-index: 1;
+    font-size: 13px;
+    left: 20px;
+}
+
+.latest-news .boxes .box:hover::after {
+    background-color: rgb(0, 0, 0, 0.7);
+}
+
+.latest-news .boxes .box::before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 7px;
+    background-color: var(--primary);
+    bottom: 0px;
+    left: 0;
+    transition: 0.3s;
+    opacity: 0;
+}
+
+.latest-news .boxes .box:hover::before {
+    width: 100%;
+    z-index: 5;
+    opacity: 1;
+}
+
+@media (max-width: 767px) {
+    .latest-news .container {
+        padding: 20px;
+    }
+
+    .latest-news .container .boxes {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .latest-news .container .boxes .box {
+        width: 100%;
+        margin-top: -5px;
+    }
+}
+
+/* End Latest News */
+
+/* Start Home Table */
+
+.home-table {
+    background-color: #1a1e25;
+    padding: 100px 0;
+}
+
+.home-table .container {
+    display: flex;
+    gap: 20px;
+}
+
+.home-table .container .next-match {
+    width: 50%;
+    border: 1px solid #555;
+}
+
+.home-table .container .next-match .head {
+    background-color: var(--primary);
+    padding: 20px;
+    color: #fff;
+    font-weight: bold;
+    border: 1px solid var(--primary);
+}
+
+.home-table .container .next-match .box {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.home-table .container .next-match .b1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    gap: 15%;
+}
+
+.home-table .container .next-match .b1 .spans {
+    display: flex;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.home-table .container .next-match .b1 .spans span {
+    background-color: var(--primary);
+    width: 25px;
+    height: 25px;
+    padding: 10px;
+    display: block;
+}
+
+.home-table .container .next-match .b1 .spans .mainSpan {
+    z-index: 5;
+    color: #fff;
+    font-weight: bold;
+    font-size: 13px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.home-table .container .next-match .b1 .spans .s1 {
+    border-radius: 50%;
+    transform: translateX(50%);
+}
+
+.home-table .container .next-match .b1 .spans .s2 {
+    border-radius: 50%;
+    transform: translateX(-50%);
+}
+
+.home-table .container .next-match .b1 .team {
+    width: 40%;
+}
+
+.home-table .container .next-match .b1 .team p {
+    margin-top: 20px;
+    color: #fff;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.home-table .container .next-match .b2 {
+    margin-top: -50px;
+}
+
+.home-table .container .next-match .b2 p {
+    color: var(--primary);
+    margin-bottom: 20px;
+    display: block;
+}
+
+.home-table .container .next-match .b2 p:first-of-type {
+    font-weight: bold;
+}
+
+.home-table .container .next-match .b2 span {
+    color: #777;
+    display: block;
+    line-height: 1.5;
+    margin-bottom: 10px;
+}
+
+.home-table .container .next-match .b1 img {
+    width: 70px;
+    height: 70px;
+}
+
+.home-table .container .mini-table {
+    width: 50%;
+}
+
+.home-table .container .mini-table .head {
+    padding: 20px;
+    background-color: var(--primary);
+    color: #fff;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+}
+
+.home-table .container .mini-table .head div {
+    display: flex;
+    gap: 20px;
+}
+
+.home-table .container .mini-table .body .team {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 20px;
+    border: 1px solid;
+    border-color: transparent #444 #444 #444;
+}
+
+.home-table .container .mini-table .body .team div {
+    display: flex;
+    gap: 20px;
+}
+
+.home-table .container .mini-table .body .team div p {
+    color: #fff;
+}
+
+.home-table .container .mini-table .body .team div span {
+    color: #888;
+    margin-right: 2px;
+    min-width: 15px;
+}
+
+@media (max-width: 991px) {
+
+    .home-table .container .mini-table .body .team div p:nth-of-type(2) {
+        font-size: 12px;
+        max-width: 100px;
+    }
+
+}
+
+@media (max-width: 767px) {
+
+    .home-table .container .mini-table .body .team div p:nth-of-type(2) {
+        font-size: 15px;
+        max-width: none;
+    }
+
+    .home-table .container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .home-table .container .next-match,
+    .home-table .container .mini-table {
+        width: 100%;
+    }
+
+    .home-table .container .mini-table .head div {
+        gap: 10px;
+    }
+
+    .home-table .container .mini-table .body .team div {
+        gap: 10px;
+    }
+}
+
+/* End Home Table */
+
+/* Start Videos */
+
+.videos {
+    padding: 100px 0;
+    position: relative;
+}
+
+.videos .container {
+    position: relative;
+}
+
+.videos .container > i {
+    position: absolute;
+    color: #fff;
+    background-color: rgb(0, 0, 0, 0.5);
+    padding: 10px;
+    border-radius: 5px;
+    display: none;
+}
+
+.videos .container .left {
+    right: 60px;
+}
+
+.videos .container .right {
+    right: 20px;
+}
+
+.videos .container .boxes {
+    display: flex;
+    margin-top: 50px;
+}
+
+.videos .container .boxes .box {
+    position: relative;
+}
+
+.videos .container .boxes .box::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: calc(100% - 4px);
+    left: 0;
+    top: 0;
+    background-color: rgb(0, 0, 0, 0.5);
+    z-index: 5;
+}
+
+.videos .container .boxes .box img {
+    width: 100%;
+    position: relative;
+}
+
+.videos .container .boxes .box {
+    position: relative;
+}
+
+.videos .container .boxes .box .caption {
+    padding: 0 20px;
+    bottom: 20px;
+    color: #fff;
+    font-size: 17.5px;
+    font-weight: bold;
+    gap: 5%;
+    z-index: 8;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.videos .container .boxes .box .caption p {
+    width: 75%;
+}
+
+.videos .container .boxes .box .caption .player {
+    width: 50px;
+    height: 50px;
+    margin-top: auto;
+    background-color: var(--primary);
+    border-radius: 50%;
+    position: relative;
+}
+
+.videos .container .boxes .box .caption .player::before {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    border: 2px solid var(--primary);
+    border-radius: 50%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    padding: 5px;
+}
+
+.videos .container .boxes .box .caption .player i {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.videos .container .boxes .box .caption .player a {
+    display: block;
+    position: relative;
+    font-size: 30px;
+    opacity: 0;
+    z-index: 5;
+}
+
+.videos .container ul {
+    display: none;
+}
+
+@media (max-width: 767px) {
+    .videos .container i {
+        display: block;
+        cursor: pointer;
+        z-index: 0;
+    }
+
+    .videos .container .boxes {
+        position: relative;
+        overflow: hidden;
+    }
+
+    .videos .container .boxes .cont {
+        position: absolute;
+        width: 100%;
+        top: 0;
+        left: 0;
+        transform: translateX(110%);
+        opacity: 0;
+        transition: all 0.5s ease;
+    }
+
+    .videos .container .boxes .active {
+        transform: translateX(0);
+        opacity: 1;
+        z-index: 0;
+        position: relative;
+    }
+
+    .videos .container .boxes .leftBox {
+        transform: translateX(-110%);
+        opacity: 0;
+        z-index: 1;
+    }
+
+    .videos .container .boxes .rightBox {
+        transform: translateX(110%);
+        opacity: 0;
+        z-index: 1;
+    }
+
+    .videos .container .boxes .box .caption {
+        bottom: 15px;
+        left: 0;
+        width: 100%;
+        padding: 20px;
+        gap: 10px;
+    }
+
+    .videos .container .boxes .box .caption .player {
+        margin: 0 auto;
+    }
+
+    .videos .container ul {
+        display: flex;
+        margin: 50px auto;
+        width: fit-content;
+        gap: 10px;
+        bottom: 0;
+    }
+
+    .videos .container ul li {
+        width: 15px;
+        height: 15px;
+        border-radius: 50%;
+        border: 1px solid black;
+    }
+
+    .videos .container ul li.active {
+        border: none;
+        background-color: var(--primary);
+    }
+}
+
+/* End Videos */
+
+/* Start Footer */
+
+footer {
+    background-color: #1a1e25;
+    padding: 100px 0;
+}
+
+footer .container .uls {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(25%, 1fr));
+}
+
+footer .container .uls ul li:first-of-type {
+    font-size: 16px;
+    color: #fff;
+}
+
+footer .container .uls ul li {
+    padding: 10px;
+    color: #aaa;
+    font-size: 14px;
+}
+
+footer .container p {
+    display: block;
+    text-align: center;
+    margin: 100px auto 0;
+    font-size: 15px;
+    line-height: 1.5;
+    color: #777;
+}
+
+footer .container p span {
+    color: var(--primary);
+}
+
+@media (max-width: 767px) {
+    footer .container .uls {
+        display: flex;
+        flex-direction: column;
+
+    }
+}
+
+/* End Footer */
+
+/* End Home */

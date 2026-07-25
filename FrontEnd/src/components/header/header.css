@@ -1,0 +1,188 @@
+:root {
+    --blue: #007bff;
+    --indigo: #0d0cb5;
+    --purple: #7971ea;
+    --pink: #e83e8c;
+    --red: #f23a2e;
+    --orange: #ef6c57;
+    --yellow: #f89d13;
+    --green: #8bc34a;
+    --teal: #48d494;
+    --cyan: #17a2b8;
+    --white: #fff;
+    --gray: #6c757d;
+    --gray-dark: #343a40;
+    --primary: #ee1e46;
+    --secondary: #6c757d;
+    --success: #8bc34a;
+    --info: #17a2b8;
+    --warning: #f89d13;
+    --danger: #f23a2e;
+    --light: #f8f9fa;
+    --dark: #343a40;
+}
+
+header {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    z-index: 45;
+}
+
+header .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 100px;
+    position: relative;
+}
+
+header .container nav ul {
+    display: flex;
+    justify-content: space-between;
+}
+
+header .container nav ul li {
+    padding: 0 25px;
+    position: relative;
+    cursor: pointer;
+}
+
+header .container nav ul li.active::after {
+    position: absolute;
+    content: "";
+    width: 80%;
+    left: 50%;
+    bottom: -5px;
+    transform: translateX(-50%);
+    background-color: #fff;
+    height: 1px;
+}
+
+header .container nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #eee;
+    transition: 0.3s;
+}
+
+header .container nav ul li:hover a {
+    color: #777;
+}
+
+header .container .btns {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+header .container .btns .bars {
+    color: #fff;
+    display: none;
+    cursor: pointer;
+}
+
+header .container .btns button {
+    padding: 10px 15px;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 10px;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+header .container .btns .login-btn {
+    background-color: var(--primary);
+    border: 1px solid var(--primary);
+}
+
+header .container .btns .signup-btn {
+    background-color: var(--gray-dark);
+    border: 1px solid var(--gray-dark);
+}
+
+header .container .btns button:hover {
+    background-color: transparent;
+}
+
+@media (max-width: 992px) {
+    header .container nav ul li {
+        padding: 0 15px;
+    }
+
+    header .container nav ul li a {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 767px) {
+
+    header .container nav {
+        position: absolute;
+        display: block;
+        background-color: rgb(0, 0, 0, 0.8);
+        left: 0;
+        top: 100%;
+        width: 100%;
+        transform: rotateX(90deg);
+        z-index: 5;
+    }
+
+    header .container nav.open {
+        animation: OpenNav 0.5s forwards;
+    }
+
+    header .container nav.close {
+        animation: CloseNav 0.5s forwards;
+    }
+
+    header .container nav ul {
+        margin-top: 20px;
+        flex-direction: column;
+    }
+
+    header .container nav ul li {
+        padding: 20px;
+    }
+
+    header .container nav ul li.active::after {
+        position: absolute;
+        content: "";
+        width: 95%;
+        left: 50%;
+        bottom: 5px;
+    }
+
+    header .container nav ul li a {
+        font-size: 16px;
+    }
+
+    header .container .btns .bars {
+        color: #fff;
+        display: block;
+    }
+
+}
+
+@keyframes OpenNav {
+    from {
+        transform: rotateX(90deg);
+        transform-origin: top;
+    } to {
+        transform: rotateX(0deg);
+        transform-origin: top;
+    }
+}
+
+@keyframes CloseNav {
+    from {
+        transform: rotateX(0deg);
+        transform-origin: top;
+    } to {
+        transform: rotateX(90deg);
+        transform-origin: top;
+    }
+}
