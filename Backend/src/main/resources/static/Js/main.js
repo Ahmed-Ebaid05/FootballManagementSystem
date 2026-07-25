@@ -1,24 +1,24 @@
 //Fetches
 async function fetchMatchesbyStatus (status) {
-    const res = await fetch(`http://localhost:8080/getMatchesByStatus/${status}`)
+    const res = await fetch(`https://footballmanagementsystem-production-27eb.up.railway.app/getMatchesByStatus/${status}`)
     const StatusMatches = await res.json();
     return StatusMatches;
 }
 
 async function fetchTeamTable () {
-    const res = await fetch(`http://localhost:8080/getTable/`)
+    const res = await fetch(`https://footballmanagementsystem-production-27eb.up.railway.app/getTable/`)
     const Table = await res.json();
     return Table;
 }
 
 async function fetchTeamGoals (team_id) {
-    const res = await fetch(`http://localhost:8080/getGoalByTeam/${team_id}`)
+    const res = await fetch(`https://footballmanagementsystem-production-27eb.up.railway.app/getGoalByTeam/${team_id}`)
     const Goals = await res.json();
     return Goals;
 }
 
 async function fetchGoalsCount () {
-    const res = await fetch(`http://localhost:8080/getTableGoalsCount`);
+    const res = await fetch(`https://footballmanagementsystem-production-27eb.up.railway.app/getTableGoalsCount`);
     const Goals = await res.json();
     return Goals;
 }
