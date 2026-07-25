@@ -1,12 +1,12 @@
 //Fetches
 async function fetchMatch (Match_id) {
-    const res = await fetch(`http://localhost:8080/getMatch/${Match_id}`);
+    const res = await fetch(`https://footballmanagementsystem-production-27eb.up.railway.app/getMatch/${Match_id}`);
     const Match = await res.json();
     return Match;
 }
 
 async function fetchTeamById (Team_id) {
-    const res = await fetch(`http://localhost:8080/getTeam/${Team_id}`);
+    const res = await fetch(`https://footballmanagementsystem-production-27eb.up.railway.app/getTeam/${Team_id}`);
     const Team = await res.json();
     return Team;
 }
@@ -14,35 +14,35 @@ async function fetchTeamById (Team_id) {
 
 //Edit Data
 async function deleteMatchResults (Match_id) {
-    const res = await fetch(`http://localhost:8080/admin/deleteMatchResults/${Match_id}`, {
+    const res = await fetch(`https://footballmanagementsystem-production-27eb.up.railway.app/admin/deleteMatchResults/${Match_id}`, {
         method: "POST"
     });
     return res.ok;
 }
 
 async function addMatchResults (Match_id) {
-    const res = await fetch(`http://localhost:8080/admin/addMatchResults/${Match_id}`, {
+    const res = await fetch(`https://footballmanagementsystem-production-27eb.up.railway.app/admin/addMatchResults/${Match_id}`, {
         method: "POST"
     });
     return res.ok;
 }
 
 async function deleteMatchGoalsRequest (Match_id) {
-    const res = await fetch(`http://localhost:8080/admin/deleteGoalByMatch/${Match_id}`, {
+    const res = await fetch(`https://footballmanagementsystem-production-27eb.up.railway.app/admin/deleteGoalByMatch/${Match_id}`, {
         method: "POST"
     });
     return res.ok;
 }
 
 async function addGoalsRequest (Match_id, Player_id, Team_id, goal_time_min, goal_time_sec) {
-    const res = await fetch(`http://localhost:8080/admin/addGoal/${Match_id}/${Player_id}/${Team_id}/${goal_time_min}/${goal_time_sec}`, {
+    const res = await fetch(`https://footballmanagementsystem-production-27eb.up.railway.app/admin/addGoal/${Match_id}/${Player_id}/${Team_id}/${goal_time_min}/${goal_time_sec}`, {
         method: "POST"
     });
     return res.ok;
 }
 
 async function makingTableRequest () {
-    const res = await fetch(`http://localhost:8080/makingTable`, {
+    const res = await fetch(`https://footballmanagementsystem-production-27eb.up.railway.app/makingTable`, {
         method: "POST"
     });
     return res.ok;
