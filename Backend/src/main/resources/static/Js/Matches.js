@@ -40,7 +40,7 @@ async function Main () {
 
     let Arrow = document.querySelector(".round .container .arrow");
     let RoundUl = document.querySelector(".round .container ul");
-    let Round = parseInt(localStorage.getItem("round")) ;
+    let Round = parseInt(localStorage.getItem("round")) || 1;
     let RoundSpan = document.querySelector(".round .container p span");
     let DateSpan = document.querySelector(".round .container .date");
 
