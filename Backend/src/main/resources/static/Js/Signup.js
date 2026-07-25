@@ -1,6 +1,6 @@
 //Fetches
 async function fetchAccount () {
-    const res = await fetch(`http://localhost:8080/currentUser`);
+    const res = await fetch(`https://footballmanagementsystem-production-27eb.up.railway.app/currentUser`);
     if (!res.ok)
         return null;
     const text = await res.text();
@@ -11,7 +11,7 @@ async function fetchAccount () {
 
 //Edit Data
 async function editUserRequest(formData) {
-    const res = await fetch("http://localhost:8080/editUser", {
+    const res = await fetch("https://footballmanagementsystem-production-27eb.up.railway.app/editUser", {
         method: "POST",
         body: formData
     });
@@ -19,7 +19,7 @@ async function editUserRequest(formData) {
 }
 
 async function addUserRequest(formData) {
-    const res = await fetch("http://localhost:8080/addUser", {
+    const res = await fetch("https://footballmanagementsystem-production-27eb.up.railway.app/addUser", {
         method: "PUT",
         body: formData
     });
