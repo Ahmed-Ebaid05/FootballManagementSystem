@@ -1,6 +1,6 @@
 //Fetches
 async function fetchAccount () {
-    const res = await fetch(`http://localhost:8080/currentUser`);
+    const res = await fetch(`https://footballmanagementsystem-production-27eb.up.railway.app/currentUser`);
     if (!res.ok)
         return null;
     const text = await res.json()
@@ -12,7 +12,7 @@ async function fetchAccount () {
 //Edit Data
 
 async function changeProfilePicRequest(formData) {
-    const res = await fetch("http://localhost:8080/changeProfilePic", {
+    const res = await fetch("https://footballmanagementsystem-production-27eb.up.railway.app/changeProfilePic", {
         method: "POST",
         body: formData
     });
@@ -21,7 +21,7 @@ async function changeProfilePicRequest(formData) {
 }
 
 async function deleteAccountRequest (email ,password) {
-    const res = await fetch(`http://localhost:8080/deleteAccount/${email}/${password}`, {
+    const res = await fetch(`https://footballmanagementsystem-production-27eb.up.railway.app/deleteAccount/${email}/${password}`, {
         method: "DELETE",
     });
     return res.json();
