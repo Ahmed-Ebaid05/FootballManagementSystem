@@ -18,6 +18,7 @@ document.querySelector(".login-form .container").addEventListener("submit", asyn
 
     if (response.ok) {
         window.location.href = "https://footballmanagementsystem-production-27eb.up.railway.app/Dashboard.html";
+        document.location.reload();
     } else {
         DimOverlay.classList.add("dim");
         ProcessFailed.classList.add("active");
