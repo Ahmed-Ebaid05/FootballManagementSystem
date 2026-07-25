@@ -148,9 +148,9 @@ public class UserController {
             if (pic != null && !pic.isEmpty()) {
                 picBytes = pic.getBytes();
             } else {
-                picBytes = Files.readAllBytes(Path.of(
-                    "C:\\Users\\Lenovo\\Desktop\\demo2\\src\\main\\resources\\static\\images\\images.png"
-                ));            
+                picBytes = new ClassPathResource("static/images/images.png")
+                    .getInputStream()
+                    .readAllBytes();         
             }
             return ResponseEntity.ok(userService.changeProfilePic(email, picBytes));
         } catch (DataIntegrityViolationException e) {
