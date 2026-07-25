@@ -1,6 +1,6 @@
 //Fetches
 async function fetchPlayersByTeam (team_id) {
-    const res = await fetch(`http://localhost:8080/admin/getPlayersByTeam/${team_id}`);
+    const res = await fetch(`https://footballmanagementsystem-production-27eb.up.railway.app//admin/getPlayersByTeam/${team_id}`);
     const Players = await res.json();
     return Players;
 }
